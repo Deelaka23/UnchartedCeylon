@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uncharted Ceylon | Discover the Untouched</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header id="main-nav">
+        <nav>
+                <div class="logo">UC</div>
+                <div class="nav-links">
+                    <a href="index.html" id="nav-home">Home</a>
+                    <a href="#stories">Stories</a>
+                    <a href="category.html?type=waterfalls">Hidden Experiences</a>
+                    <a href="#travel-cost">Travel Cost</a>
+                    <a href="crew.html?group=waterfall-seekers">Communities</a>
+                    <a href="#sustainability">Sustainability</a>
+                    <a href="#footer-contact">Contact</a>
+                </div>
+            </nav>
+    </header>
+
+    <main>
+        <section class="hero home-hero">
+            <div class="hero-content">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                    <button class="btn-search"><a><img src="./images/icons/search.png"></a></button>
+                </div>
+                <h1>Discover the Untouched Beauty of Sri Lanka</h1>
+                <p>Explore hidden gems beyond the popular trails.</p>
+                <a href="#hidden-experiences" class="btn-primary">Start Exploring</a>
+            </div>
+        </section>
+
+        <section id="stories" class="section-container">
+            <h2 class="section-title">Stories</h2>
+            <div id="home-stories-grid" class="stories-list">
+                <div id="card1">
+                    <div id="s1">
+                        
+                    </div>
+                    <div id="s1-1">
+                        Why Hidden Places Matter
+                    </div>
+                </div>
+                <div id="card2">
+                    <div id="s2-2">
+                        Why Hidden Places Matter
+                    </div>
+                    <div id="s2">
+                        
+                    </div>
+                    
+                </div>
+                <div id="card3">
+                    <div id="s3">
+                    </div>
+                    <div id="s3-3">
+                        Why Hidden Places Matter
+                    </div>
+                </div>
+                </div>
+        </section>
+
+        <section id="hidden-experiences" class="section-container">
+            <h2 class="section-title">Hidden Experiences</h2>
+            <div id="home-categories-slider" class="card-slider">
+                
+    <div class="wrapper">
+        <button class="btn" onclick="moveLeftCard()">&lt;</button>
+
+        <div class="scroll-container" id="myContainer">
+            
+            <div class="card">
+                <div id="waterfall-img"></div>
+                <h3>Waterfalls</h3>
+                <p>Discover misty cascades hidden deep within lush forests, where the sound of rushing water and untouched nature create a truly immersive escape.</p>
+                <a href="./category.html?type=waterfalls"><button class="explore-btn">Explore</button></a>
+            </div>
+
+            <div class="card">
+                <div id="mountain-img"></div>
+                <h3>Mountains</h3>
+                <p>Climb beyond the clouds and explore quiet highland trails, panoramic ridges, and sunrise viewpoints far from the usual tourist paths.</p>
+                <a href="./category.html?type=mountains"><button class="explore-btn">Explore</button></a>
+            </div>
+
+            <div class="card">
+                <div id="beach-img"></div>
+                <h3>Hidden Beaches</h3>
+                <p>Find secluded shores where golden sands meet endless horizons, offering peaceful moments away from crowded coastal hotspots.</p>
+                <a href="./category.html?type=beaches"><button class="explore-btn">Explore</button></a>
+            </div>
+
+            <div class="card">
+                <div id="camping-img"></div>
+                <h3>Camping Spots</h3>
+                <p>Sleep under open skies surrounded by forests, rivers, and mountain air, and reconnect with nature in its purest form.</p>
+                <a href="./category.html?type=waterfalls"><button class="explore-btn">Explore</button></a>
+            </div>
+            <div class="card">
+                <div id="village-img"></div>
+                <h3>Cultural Villages</h3>
+                <p>Step into living traditions preserved for generations and experience authentic village life, craftsmanship, and local hospitality.</p>
+                <a href="./category.html?type=waterfalls"><button class="explore-btn">Explore</button></a>
+            </div>
+
+        </div>
+
+        <button class="btn" onclick="moveRightCard()">&gt;</button>
+    </div>
+
+                </div>
+        </section>
+
+        <section class="section-container">
+            <h2 class="section-title" id="travel-cost">Prepare for the Adventure</h2>
+            
+                <div class="cost-form">
+                    <h3>Estimated Travel Cost Guide</h3>
+                    <p>Get a rough idea of your expenses for local travel.</p>
+                    <div class="travel-cost-tool">
+                    <form class="form-group">
+                        <div class="dest-row">
+                        <label for="sele-destination">Select destination</label>
+                        <select name="sele-destination" id="sele-destination">
+                            <option value="seegiriya">Seegiriya</option>
+                            <option value="colombo">Colmbo</option>
+                            <option value="reverston">Reverston</option>
+                        </select>
+                        </div> 
+                        <br>
+                        <div class="ndays-row">
+                        <label for="ndays">Number of days</label>
+                        <input type="number" name="ndays" id="ndays" min="1">
+                        </div>
+                        <br>
+                        <div class="transport-row">
+                        <label for="trans-type">Transport type</label>
+                        <select name="trans-type" id="trans-type">
+                            <option value="public">Public</option>
+                            <option value="privatevehicle"> Private vehicle</option>
+                            <option value="own">Own vehicle</option>
+                        </select> 
+                        </div>
+                        <br>
+                        <div class="travel-row">
+                        <label for="travel-type">Travel type</label>
+                        <select name="travel-type" id="travel-type">
+                            <option value="budget">Budget</option>
+                            <option value="mid"> Mid</option>
+                            <option value="luxury">Luxury</option>
+                        </select> 
+                        </div>
+                        <br>
+                        <div class="accomodation-row">
+                        <label for="acco-type">Accommodation type</label>
+                        <select name="acco-type" id="acco-type">
+                            <option value="camping">Camping</option>
+                            <option value="guesthouse">Guesthouse</option>
+                            <option value="hotel">Hotel</option>
+                        </select> 
+                        </div>
+                        <br>
+                        <div class="food-row">
+                        <label for="food-type">Food type</label>
+                        <select name="food-type" id="food-type">
+                            <option value="street">Street</option>
+                            <option value="restaurant">Restaurant</option>
+                            <option value="premium">Premium</option>
+                        </select> 
+                        </div>
+                        <br>
+                        <div class="currency-row">
+                        <label for="currency">Currency</label>
+                        <select name="currency" id="currency">
+                            <option value="lkr">Sri Lankan Rupees(LKR)</option>
+                            <option value="usd">United States Dollar (USD)</option>
+                            <option value="eur">Euro (EUR)</option>
+                            <option value="gbp">British Pound Sterling (GBP)</option>
+                            <option value="jpy">Japanese Yen (JPY)</option>
+                            <option value="cny">Chinese Yuan (CNY)</option>
+                        </select> 
+                        </div>
+                        <br>
+                        <span class="price-highlight">Estimated Cost : </span> <span class="currency-show">Rs</span> <span class="price">5200.00</span>
+                        <br><br>
+                        <button class="cal-btn" onclick="calculatePrice(event);">Calculate</button>
+                    </form>
+                    
+                </div>
+                <p class="form-info">Flight and international transport costs are not included.(All prices are estimated and may vary depending on season and availability).</p>
+            </div>
+        </section>
+
+      <section class="section-container">
+    <h2 class="section-title">Join a Travel Crew</h2>
+
+    <div class="crew-wrapper">
+        <button class="scroll-btn left" onclick="scrollCrew(-1)">&#10094;</button>
+
+        <div class="crew-scroll" id="crewScroll">
+
+            <div class="crew-circle" style="background-image: url('./images/hero-img.jpg');">
+                <div class="overlay">
+                    <h3>Waterfall Explorers</h3>
+                    <p>Chase hidden forest cascades with adventure lovers.</p>
+                    <button class="join-btn">Join</button>
+                </div>
+            </div>
+
+            <div class="crew-circle" style="background-image: url('./images/placeholder.jpg');">
+                <div class="overlay">
+                    <h3>Cultural Trail</h3>
+                    <p>Experience ancient cities and village traditions.</p>
+                    <button class="join-btn">Join</button>
+                </div>
+            </div>
+
+            <div class="crew-circle" style="background-image: url('./images/placeholder.jpg');">
+                <div class="overlay">
+                    <h3>Hidden Beaches</h3>
+                    <p>Discover peaceful shores beyond the crowds.</p>
+                    <button class="join-btn">Join</button>
+                </div>
+            </div>
+
+            <div class="crew-circle" style="background-image: url('./images/hero-img.jpg');">
+                <div class="overlay">
+                    <h3>Mountain Hiking</h3>
+                    <p>Climb scenic peaks and watch golden sunrises.</p>
+                    <button class="join-btn">Join</button>
+                </div>
+            </div>
+
+            <div class="crew-circle" style="background-image: url('./images/hero-img.jpg');">
+                <div class="overlay">
+                    <h3>Camping Crew</h3>
+                    <p>Sleep under the stars in wild landscapes.</p>
+                    <button class="join-btn">Join</button>
+                </div>
+            </div>
+
+            </div>
+
+            <button class="scroll-btn right" onclick="scrollCrew(1)">&#10095;</button>
+            </div>
+        </section>
+        <section class="section-container">
+        <h2 class="section-title" id="sustainability">Travel responsibly in Sri Lanka</h2>
+        <div class="travel-responsibly-content">
+        <div class="travel-responsibly-img"></div>
+        <div class="travel-responsibly-txt">
+
+        <h3>Respect Nature</h3>
+        <ul>
+            <li>Do not litter</li>
+            <li>Avoid damaging ecosystems</li>
+            <li>Follow local guidelines</li>
+        </ul>
+
+        <h3>Support Local Communities</h3>
+        <ul>
+            <li>Hire local guides</li>
+            <li>Buy from small businesses</li>
+            <li>Respect local culture</li>
+        </ul>
+
+        <h3>Protect Wildlife</h3>
+        <ul>
+            <li>Avoid unethical animal tourism</li>
+            <li>Keep safe distance</li>
+        </ul>
+
+        <h3>Reduce Carbon Impact</h3>
+        <ul>
+            <li>Use public transport</li>
+            <li>Travel in groups</li>
+            <li>Avoid plastic</li>
+        </ul>
+            </div>
+            </div>
+            </section>       
+    </main>
+    
+    <footer class="main-footer">
+        <div class="footer-upper">
+            <div class="footer-brand">
+                <div class="footer-title">
+                    <div class="footer-logo" style="background-image: url('./images/placeholder.jpg');"></div>
+                    <div class="footer-title-txt">
+                        <h2>Exploring responsibly, preserving for tomorrow.</h2>
+                    </div>
+                </div>
+                <p class="footer-description">Discover the hidden and untold destinations of Sri Lanka through immersive storytelling,
+                     responsible travel, and authentic local experiences.
+                </p>
+            </div>
+            <div class="footer-contact-nav">
+                <div class="footer-links">
+                    <div class="footer-nav-support">
+                        <div class="footer-nav">
+                            <a href="#">Stories</a>
+                            <a href="#">Hidden Experiences</a>
+                            <a href="#">Communities</a>
+                            <a href="#">Plan Your Trip</a>
+                        </div>
+                        <div class="footer-support">
+                            <a href="#">FAQ</a>
+                            <a href="#">Accessibility Policy</a>
+                            <a href="#">Privacy Policy</a>
+                        </div>
+                    </div>
+                    <div class="footer-social">
+                        <div class="fb"></div>
+                        <div class="insta"></div>
+                        <div class="yt"></div>
+                        <div class="x"></div>
+                        <div class="tiktok"></div>
+                    </div>
+
+                </div>
+                <div class="footer-contact" id="footer-contact">
+                    <h3>Contact Us</h3>
+                    <div class="footer-email-row">
+                        <label>Email :</label><input type="email" id="email" name="email">
+                    </div>
+                    <div class="footer-message-row">
+                        <label>Message :</label>
+                        <textarea id="message" name="message" rows="4">
+                        </textarea>
+                    </div>
+                    <br>
+                        <button class="send" value="Send">Send</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="footer-bottom">
+            <p>&copy 2026 Uncharted Ceylon. All rights reserved.</p>
+        </div>
+
+    </footer>
+
+    <script>
+            // We get the container once so we can move it
+            const container = document.getElementById('myContainer');
+
+            function moveRightCard() {
+                // Move the scroll position 200 pixels to the right
+                container.scrollLeft = container.scrollLeft + 200;
+            }
+
+            function moveLeftCard() {
+                // Move the scroll position 200 pixels to the left
+                container.scrollLeft = container.scrollLeft - 200;
+            }
+            function scrollCrew(direction) {
+        const container = document.getElementById("crewScroll");
+        const scrollAmount = 380;
+        container.scrollLeft += direction * scrollAmount;
+    }
+            function calculatePrice(event){
+                // Prevent form refresh
+                if(event){
+                    event.preventDefault();
+                }
+                //calculate the cost
+                let destinationValue,nOfDaysValue,transportValue,travelValue,accommodationValue,foodValue,currencyValue;
+                let destination=document.getElementById("sele-destination").value;
+                let nOfDays=document.getElementById("ndays").value;
+                let transportType=document.getElementById("trans-type").value;
+                let travelType=document.getElementById("travel-type").value;
+                let accommodationType=document.getElementById("acco-type").value;
+                let foodType=document.getElementById("food-type").value;
+                let currency=document.getElementById("currency").value;
+                
+                if (destination === "seegiriya") {
+                    destinationValue = 35;
+                }
+                else if (destination === "colombo") {
+                    destinationValue = 15;
+                }
+                else if (destination === "reverston") {
+                    destinationValue = 10;
+                }
+
+                // -------------------------
+                // TRANSPORT COST (USD)
+                // -------------------------
+                if (transportType === "public") {
+                    transportValue = 15;
+                }
+                else if (transportType === "privatevehicle") {
+                    transportValue = 80;
+                }
+                else if (transportType === "own") {
+                    transportValue = 25;
+                }
+
+                // -------------------------
+                // TRAVEL TYPE EXTRA COST (USD)
+                // -------------------------
+                if (travelType === "budget") {
+                    travelValue = 0;
+                }
+                else if (travelType === "mid") {
+                    travelValue = 40;
+                }
+                else if (travelType === "luxury") {
+                    travelValue = 120;
+                }
+
+                // -------------------------
+                // ACCOMMODATION PER DAY (USD)
+                // -------------------------
+                if (accommodationType === "camping") {
+                    accommodationValue = 10;
+                }
+                else if (accommodationType === "guesthouse") {
+                    accommodationValue = 25;
+                }
+                else if (accommodationType === "hotel") {
+                    accommodationValue = 80;
+                }
+
+                // -------------------------
+                // FOOD PER DAY (USD)
+                // -------------------------
+                if (foodType === "street") {
+                    foodValue = 10;
+                }
+                else if (foodType === "restaurant") {
+                    foodValue = 20;
+                }
+                else if (foodType === "premium") {
+                    foodValue = 40;
+                }
+
+                // -------------------------
+                // TOTAL IN USD
+                // -------------------------
+                let totalUSD =
+                    destinationValue +
+                    transportValue +
+                    travelValue +
+                    (accommodationValue * nOfDays) +
+                    (foodValue * nOfDays);
+
+                // -------------------------
+                // CURRENCY CONVERSION
+                // -------------------------
+                if (currency === "usd") {
+                    finalPrice = totalUSD;
+                }
+                else if (currency === "lkr") {
+                    finalPrice = totalUSD * 320;
+                }
+                else if (currency === "eur") {
+                    finalPrice = totalUSD * 0.93;
+                }
+                else if (currency === "gbp") {
+                    finalPrice = totalUSD * 0.80;
+                }
+                else if (currency === "jpy") {
+                    finalPrice = totalUSD * 150;
+                }
+                else if (currency === "cny") {
+                    finalPrice = totalUSD * 7.2;
+                }
+
+                finalPrice/=3;
+                // -------------------------
+                // DISPLAY RESULT
+                // -------------------------
+                document.querySelector(".price").textContent = finalPrice.toFixed(2);
+                document.querySelector(".currency-show").textContent = currency.toUpperCase();
+                
+    }
+
+    </script>
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

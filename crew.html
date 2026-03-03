@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join a Crew | Uncharted Ceylon</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header id="main-nav"></header>
+
+    <main id="crew-page">
+        <section class="hero dynamic-hero">
+            <div class="hero-content">
+                <h1 id="crew-title">Crew Name</h1>
+                <div class="crew-meta-badge">
+                    <p id="crew-meta-text"></p>
+                    <button class="btn-primary-small">Join the Crew</button>
+                </div>
+            </div>
+        </section>
+
+        <div class="container-narrow">
+            <section class="detail-section">
+                <h2 class="line-header">About This Crew</h2>
+                <p id="crew-about"></p>
+                
+                <h3>Activities & Focus Areas</h3>
+                <ul id="crew-activities" class="styled-list"></ul>
+            </section>
+
+            <section class="detail-section">
+                <h2 class="line-header">Join This Crew</h2>
+                <form id="join-crew-form" class="stack-form">
+                    <div class="form-row">
+                        <label>Full Name</label>
+                        <input type="text" id="form-name" required>
+                    </div>
+                    <div class="form-row">
+                        <label>Email</label>
+                        <input type="email" id="form-email" required>
+                    </div>
+                    <div class="form-row">
+                        <label>Message</label>
+                        <textarea id="form-msg" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Submit</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer id="main-footer"></footer>
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
