@@ -9,26 +9,29 @@
 <body>
     <header id="main-nav">
         <nav>
-                <div class="logo">UC</div>
+                <a href="index.html"> <div class="logo">UC</div></a>
                 <div class="nav-links">
                     <a href="index.html" id="nav-home">Home</a>
                     <a href="#stories">Stories</a>
-                    <a href="category.html?type=waterfalls">Hidden Experiences</a>
+                    <a href="#hidden-experiences">Hidden Experiences</a>
                     <a href="#travel-cost">Travel Cost</a>
-                    <a href="crew.html?group=waterfall-seekers">Communities</a>
+                    <a href="#crew">Communities</a>
                     <a href="#sustainability">Sustainability</a>
                     <a href="#footer-contact">Contact</a>
                 </div>
             </nav>
     </header>
 
-    <main>
+    <main><a class="btn-search"></a>
         <section class="hero home-hero">
             <div class="hero-content">
                 <div class="search-bar">
-                    <input type="text" placeholder="Search...">
-                    <button class="btn-search"><a><img src="./images/icons/search.png"></a></button>
-                </div>
+    <form action="category.html" method="GET" style="display: flex; align-items: center; justify-content: center;">
+        <input type="text" name="search" placeholder="Search waterfalls, mountains, districts..." required>
+        <button type="submit" class="btn-search">
+            <img src="./images/icons/search.png" alt="Search"> </button>
+    </form>
+</div>
                 <h1>Discover the Untouched Beauty of Sri Lanka</h1>
                 <p>Explore hidden gems beyond the popular trails.</p>
                 <a href="#hidden-experiences" class="btn-primary">Start Exploring</a>
@@ -43,12 +46,12 @@
                         
                     </div>
                     <div id="s1-1">
-                        Why Hidden Places Matter
+                        A Night Under the Stars in Knuckles 
                     </div>
                 </div>
                 <div id="card2">
                     <div id="s2-2">
-                        Why Hidden Places Matter
+                        The Silent Beaches of the East
                     </div>
                     <div id="s2">
                         
@@ -59,7 +62,7 @@
                     <div id="s3">
                     </div>
                     <div id="s3-3">
-                        Why Hidden Places Matter
+                        Chasing Waterfalls Beyond the Known
                     </div>
                 </div>
                 </div>
@@ -70,7 +73,7 @@
             <div id="home-categories-slider" class="card-slider">
                 
     <div class="wrapper">
-        <button class="btn" onclick="moveLeftCard()">&lt;</button>
+        <button class="btn" onclick="moveLeftCard()">&#10094;</button>
 
         <div class="scroll-container" id="myContainer">
             
@@ -99,18 +102,12 @@
                 <div id="camping-img"></div>
                 <h3>Camping Spots</h3>
                 <p>Sleep under open skies surrounded by forests, rivers, and mountain air, and reconnect with nature in its purest form.</p>
-                <a href="./category.html?type=waterfalls"><button class="explore-btn">Explore</button></a>
-            </div>
-            <div class="card">
-                <div id="village-img"></div>
-                <h3>Cultural Villages</h3>
-                <p>Step into living traditions preserved for generations and experience authentic village life, craftsmanship, and local hospitality.</p>
-                <a href="./category.html?type=waterfalls"><button class="explore-btn">Explore</button></a>
+                <a href="./category.html?type=camping"><button class="explore-btn">Explore</button></a>
             </div>
 
         </div>
 
-        <button class="btn" onclick="moveRightCard()">&gt;</button>
+        <button class="btn" onclick="moveRightCard()">&#10095;</button>
     </div>
 
                 </div>
@@ -127,9 +124,6 @@
                         <div class="dest-row">
                         <label for="sele-destination">Select destination</label>
                         <select name="sele-destination" id="sele-destination">
-                            <option value="seegiriya">Seegiriya</option>
-                            <option value="colombo">Colmbo</option>
-                            <option value="reverston">Reverston</option>
                         </select>
                         </div> 
                         <br>
@@ -186,7 +180,7 @@
                         </select> 
                         </div>
                         <br>
-                        <span class="price-highlight">Estimated Cost : </span> <span class="currency-show">Rs</span> <span class="price">5200.00</span>
+                        <span class="price-highlight">Estimated Cost : </span> <span class="currency-show"></span> <span class="price"></span>
                         <br><br>
                         <button class="cal-btn" onclick="calculatePrice(event);">Calculate</button>
                     </form>
@@ -197,58 +191,50 @@
         </section>
 
       <section class="section-container">
-    <h2 class="section-title">Join a Travel Crew</h2>
+    <h2 class="section-title" id="crew">Join a Travel Crew</h2>
 
     <div class="crew-wrapper">
         <button class="scroll-btn left" onclick="scrollCrew(-1)">&#10094;</button>
 
         <div class="crew-scroll" id="crewScroll">
 
-            <div class="crew-circle" style="background-image: url('./images/hero-img.jpg');">
+            <div class="crew-circle" style="background-image: url('./images/waterfalls-hero.jpg');">
                 <div class="overlay">
                     <h3>Waterfall Explorers</h3>
                     <p>Chase hidden forest cascades with adventure lovers.</p>
-                    <button class="join-btn">Join</button>
+                    <a href="crew.html?group=waterfall-explorers" class="join-btn" style="text-decoration: none; display: inline-block;">Join</a>
                 </div>
             </div>
 
-            <div class="crew-circle" style="background-image: url('./images/placeholder.jpg');">
-                <div class="overlay">
-                    <h3>Cultural Trail</h3>
-                    <p>Experience ancient cities and village traditions.</p>
-                    <button class="join-btn">Join</button>
-                </div>
-            </div>
-
-            <div class="crew-circle" style="background-image: url('./images/placeholder.jpg');">
+            <div class="crew-circle" style="background-image: url('./images/beach-hero.jpeg');">
                 <div class="overlay">
                     <h3>Hidden Beaches</h3>
                     <p>Discover peaceful shores beyond the crowds.</p>
-                    <button class="join-btn">Join</button>
+                    <a href="crew.html?group=hidden-beaches" class="join-btn" style="text-decoration: none; display: inline-block;">Join</a>
                 </div>
             </div>
 
-            <div class="crew-circle" style="background-image: url('./images/hero-img.jpg');">
+            <div class="crew-circle" style="background-image: url('./images/mountains-hero.webp');">
                 <div class="overlay">
                     <h3>Mountain Hiking</h3>
                     <p>Climb scenic peaks and watch golden sunrises.</p>
-                    <button class="join-btn">Join</button>
+                    <a href="crew.html?group=mountain-hiking" class="join-btn" style="text-decoration: none; display: inline-block;">Join</a>
                 </div>
             </div>
 
-            <div class="crew-circle" style="background-image: url('./images/hero-img.jpg');">
+            <div class="crew-circle" style="background-image: url('./images/camping-hero.jpg');">
                 <div class="overlay">
                     <h3>Camping Crew</h3>
                     <p>Sleep under the stars in wild landscapes.</p>
-                    <button class="join-btn">Join</button>
+                    <a href="crew.html?group=camping-crew" class="join-btn" style="text-decoration: none; display: inline-block;">Join</a>
                 </div>
             </div>
 
-            </div>
+        </div>
 
-            <button class="scroll-btn right" onclick="scrollCrew(1)">&#10095;</button>
-            </div>
-        </section>
+        <button class="scroll-btn right" onclick="scrollCrew(1)">&#10095;</button>
+    </div>
+</section>
         <section class="section-container">
         <h2 class="section-title" id="sustainability">Travel responsibly in Sri Lanka</h2>
         <div class="travel-responsibly-content">
@@ -290,7 +276,7 @@
         <div class="footer-upper">
             <div class="footer-brand">
                 <div class="footer-title">
-                    <div class="footer-logo" style="background-image: url('./images/placeholder.jpg');"></div>
+                    <div class="footer-logo">UC</div>
                     <div class="footer-title-txt">
                         <h2>Exploring responsibly, preserving for tomorrow.</h2>
                     </div>
@@ -303,10 +289,10 @@
                 <div class="footer-links">
                     <div class="footer-nav-support">
                         <div class="footer-nav">
-                            <a href="#">Stories</a>
-                            <a href="#">Hidden Experiences</a>
-                            <a href="#">Communities</a>
-                            <a href="#">Plan Your Trip</a>
+                            <a href="#stories">Stories</a>
+                            <a href="#hidden-experiences">Hidden Experiences</a>
+                            <a href="#crew">Communities</a>
+                            <a href="#travel-cost">Plan Your Trip</a>
                         </div>
                         <div class="footer-support">
                             <a href="#">FAQ</a>
@@ -334,7 +320,7 @@
                         </textarea>
                     </div>
                     <br>
-                        <button class="send" value="Send">Send</button>
+                        <button class="send" id="footer-send-btn">Send</button>
                 </div>
             </div>
 
@@ -344,144 +330,87 @@
         </div>
 
     </footer>
-
     <script>
-            // We get the container once so we can move it
-            const container = document.getElementById('myContainer');
-
-            function moveRightCard() {
-                // Move the scroll position 200 pixels to the right
-                container.scrollLeft = container.scrollLeft + 200;
-            }
-
-            function moveLeftCard() {
-                // Move the scroll position 200 pixels to the left
-                container.scrollLeft = container.scrollLeft - 200;
-            }
-            function scrollCrew(direction) {
-        const container = document.getElementById("crewScroll");
-        const scrollAmount = 380;
-        container.scrollLeft += direction * scrollAmount;
+    document.addEventListener('DOMContentLoaded', () => {
+    const destSelect = document.getElementById("sele-destination");
+    
+    // Auto-fill the dropdown using your SITE_DATA
+    if (destSelect && typeof SITE_DATA !== 'undefined') {
+        // Get all place IDs
+        const placeIds = Object.keys(SITE_DATA.places);
+        
+        // Create an option for each place
+        placeIds.forEach(id => {
+            const place = SITE_DATA.places[id];
+            const option = document.createElement("option");
+            option.value = id;
+            option.textContent = `${place.name} (${place.district})`;
+            destSelect.appendChild(option);
+        });
     }
-            function calculatePrice(event){
-                // Prevent form refresh
-                if(event){
-                    event.preventDefault();
-                }
-                //calculate the cost
-                let destinationValue,nOfDaysValue,transportValue,travelValue,accommodationValue,foodValue,currencyValue;
-                let destination=document.getElementById("sele-destination").value;
-                let nOfDays=document.getElementById("ndays").value;
-                let transportType=document.getElementById("trans-type").value;
-                let travelType=document.getElementById("travel-type").value;
-                let accommodationType=document.getElementById("acco-type").value;
-                let foodType=document.getElementById("food-type").value;
-                let currency=document.getElementById("currency").value;
-                
-                if (destination === "seegiriya") {
-                    destinationValue = 35;
-                }
-                else if (destination === "colombo") {
-                    destinationValue = 15;
-                }
-                else if (destination === "reverston") {
-                    destinationValue = 10;
-                }
+});
+function calculatePrice(event) {
+    if (event) event.preventDefault();
 
-                // -------------------------
-                // TRANSPORT COST (USD)
-                // -------------------------
-                if (transportType === "public") {
-                    transportValue = 15;
-                }
-                else if (transportType === "privatevehicle") {
-                    transportValue = 80;
-                }
-                else if (transportType === "own") {
-                    transportValue = 25;
-                }
+    const destId = document.getElementById("sele-destination").value;
+    const nOfDays = parseInt(document.getElementById("ndays").value) || 1;
+    const transportType = document.getElementById("trans-type").value;
+    const travelType = document.getElementById("travel-type").value;
+    const accommodationType = document.getElementById("acco-type").value;
+    const foodType = document.getElementById("food-type").value;
+    const currency = document.getElementById("currency").value;
 
-                // -------------------------
-                // TRAVEL TYPE EXTRA COST (USD)
-                // -------------------------
-                if (travelType === "budget") {
-                    travelValue = 0;
-                }
-                else if (travelType === "mid") {
-                    travelValue = 40;
-                }
-                else if (travelType === "luxury") {
-                    travelValue = 120;
-                }
+    // Get the actual place data from your SITE_DATA
+    const selectedPlace = SITE_DATA.places[destId];
 
-                // -------------------------
-                // ACCOMMODATION PER DAY (USD)
-                // -------------------------
-                if (accommodationType === "camping") {
-                    accommodationValue = 10;
-                }
-                else if (accommodationType === "guesthouse") {
-                    accommodationValue = 25;
-                }
-                else if (accommodationType === "hotel") {
-                    accommodationValue = 80;
-                }
+    // --- 1. DESTINATION BASED COST (Distance Factor) ---
+    let distanceCost = 0;
+    const district = selectedPlace.district;
 
-                // -------------------------
-                // FOOD PER DAY (USD)
-                // -------------------------
-                if (foodType === "street") {
-                    foodValue = 10;
-                }
-                else if (foodType === "restaurant") {
-                    foodValue = 20;
-                }
-                else if (foodType === "premium") {
-                    foodValue = 40;
-                }
-
-                // -------------------------
-                // TOTAL IN USD
-                // -------------------------
-                let totalUSD =
-                    destinationValue +
-                    transportValue +
-                    travelValue +
-                    (accommodationValue * nOfDays) +
-                    (foodValue * nOfDays);
-
-                // -------------------------
-                // CURRENCY CONVERSION
-                // -------------------------
-                if (currency === "usd") {
-                    finalPrice = totalUSD;
-                }
-                else if (currency === "lkr") {
-                    finalPrice = totalUSD * 320;
-                }
-                else if (currency === "eur") {
-                    finalPrice = totalUSD * 0.93;
-                }
-                else if (currency === "gbp") {
-                    finalPrice = totalUSD * 0.80;
-                }
-                else if (currency === "jpy") {
-                    finalPrice = totalUSD * 150;
-                }
-                else if (currency === "cny") {
-                    finalPrice = totalUSD * 7.2;
-                }
-
-                finalPrice/=3;
-                // -------------------------
-                // DISPLAY RESULT
-                // -------------------------
-                document.querySelector(".price").textContent = finalPrice.toFixed(2);
-                document.querySelector(".currency-show").textContent = currency.toUpperCase();
-                
+    // Pricing based on distance from Colombo/Kelaniya (in USD)
+    if (district === "Mannar" || district === "Trincomalee" || district === "Batticaloa") {
+        distanceCost = 40; // Long Distance Tier
+    } else if (district === "Badulla" || district === "Nuwara Eliya" || district === "Hambantota" || district === "Matara") {
+        distanceCost = 25; // Mid-Long Tier
+    } else if (district === "Matale" || district === "Kandy" || district === "Kurunegala") {
+        distanceCost = 15; // Mid Tier
+    } else {
+        distanceCost = 5;  // Local/Near Tier (Gampaha/Colombo/Kegalle)
     }
 
-    </script>
+    // --- 2. DIFFICULTY & GUIDE LOGIC ---
+    let guideFee = 0;
+    if (selectedPlace.difficulty.includes("Hard")) guideFee = 20;
+    if (selectedPlace.difficulty.includes("Moderate")) guideFee = 10;
+
+    // --- 3. TRANSPORT, ACCO, & FOOD (Daily Rates) ---
+    const transportMultiplier = { "public": 1, "privatevehicle": 5, "own": 2 };
+    const transportBase = distanceCost * transportMultiplier[transportType];
+
+    const dailyRates = {
+        travel: { "budget": 5, "mid": 20, "luxury": 60 },
+        acco:   { "camping": 8, "guesthouse": 20, "hotel": 55 },
+        food:   { "street": 6, "restaurant": 15, "premium": 35 }
+    };
+
+    const dailyTotal = dailyRates.travel[travelType] + 
+                       dailyRates.acco[accommodationType] + 
+                       dailyRates.food[foodType];
+
+    // --- 4. FINAL CALCULATION ---
+    let totalUSD = transportBase + guideFee + (dailyTotal * nOfDays);
+
+    // --- 5. CURRENCY & DISPLAY ---
+    const conversion = {
+        "lkr": { r: 325, s: "Rs." }, "usd": { r: 1, s: "$" },
+        "eur": { r: 0.92, s: "€" }, "gbp": { r: 0.79, s: "£" }
+    };
+
+    const finalPrice = totalUSD * conversion[currency].r;
+    document.querySelector(".price").textContent = finalPrice.toLocaleString(undefined, { minimumFractionDigits: 2 });
+    document.querySelector(".currency-show").textContent = conversion[currency].s;
+}
+</script>
     <script src="js/data.js"></script>
     <script src="js/main.js"></script>
 </body>
