@@ -3,54 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Join a Crew | Uncharted Ceylon</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Join Crew | Uncharted Ceylon</title>
+    <link rel="stylesheet" href="css/crew_style.css"> 
 </head>
 <body>
-    <header id="main-nav"></header>
+    <header id="main-nav">
+        <nav>
+               <a href="index.html"> <div class="logo">UC</div></a>
+            <div class="nav-links">
+                <a href="index.html" id="nav-home">Home</a>
+                <a href="index.html#stories">Stories</a>
+                <a href="category.html?#hidden-experiences" id="nav-hidden-experiences">Hidden Experiences</a>
+                <a href="index.html#travel-cost">Travel Cost</a>
+                <a href="index.html?#crew" id="nav-communities">Communities</a>
+                <a href="index.html#sustainability">Sustainability</a>
+                <a href="#footer-contact">Contact</a>
+            </div>
+        </nav>
+    </header>
 
     <main id="crew-page">
-        <section class="hero dynamic-hero">
+        <section class="hero dynamic-hero" id="crew-hero">
             <div class="hero-content">
-                <h1 id="crew-title">Crew Name</h1>
-                <div class="crew-meta-badge">
-                    <p id="crew-meta-text"></p>
-                    <button class="btn-primary-small">Join the Crew</button>
+                <h1 id="crew-title">Loading...</h1>
+                <p id="crew-tagline" style="font-size: 1.2rem; margin-bottom: 20px;"></p>
+                <div class="meta-badge" id="crew-meta" style="background-color: rgba(0,0,0,0.6); align-items: center; text-align: center;">
                 </div>
+                <a href="#join-crew-form" class="btn-primary">Join</a>
             </div>
         </section>
 
-        <div class="container-narrow">
-            <section class="detail-section">
-                <h2 class="line-header">About This Crew</h2>
-                <p id="crew-about"></p>
-                
-                <h3>Activities & Focus Areas</h3>
-                <ul id="crew-activities" class="styled-list"></ul>
+        <div class="section-container">
+            
+            <section class="split-section" style="flex-direction: column;">
+                <h2 class="section-title">About This Crew</h2>
+                <div class="img-about-content">
+                <p id="crew-about" style="font-size: 1.2rem; max-width: 900px; line-height: 1.8;"></p>
+                <div class="about-img"></div>
+                </div>
             </section>
 
-            <section class="detail-section">
-                <h2 class="line-header">Join This Crew</h2>
-                <form id="join-crew-form" class="stack-form">
-                    <div class="form-row">
-                        <label>Full Name</label>
-                        <input type="text" id="form-name" required>
+            <section class="split-section" style="flex-direction: column;">
+                <h3 style="font-size: 1.8rem; margin-bottom: 20px;">Activities & Focus Areas</h3>
+                <ul id="crew-activities" class="text-block" style="list-style-position: inside;">
+                </ul>
+            </section>
+
+            <section class="split-section" style="flex-direction: column;">
+                <h2 class="section-title">Upcoming Adventures</h2>
+                <div class="wrapper" style="background: none; padding: 0;">
+                    <button class="btn" onclick="scrollAdventures(-1)">&#10094;</button>
+                    <div class="scroll-container" id="crew-adventures-container" style="background: transparent;">
                     </div>
-                    <div class="form-row">
-                        <label>Email</label>
-                        <input type="email" id="form-email" required>
-                    </div>
-                    <div class="form-row">
-                        <label>Message</label>
-                        <textarea id="form-msg" rows="4"></textarea>
-                    </div>
-                    <button type="submit" class="btn-primary">Submit</button>
-                </form>
+                    <button class="btn" onclick="scrollAdventures(1)">&#10095;</button>
+                </div>
+            </section>
+
+            <section class="split-section" style="flex-direction: column;">
+                <h2 class="section-title">Join This Crew</h2>
+                <div class="push-center">
+                <div class="about-content" style="flex-direction: column; width: 100%; max-width: 700px;">
+                    <p id="crew-guidelines" style="margin-bottom: 30px; font-style: italic;"></p>
+                    
+                    <form id="join-crew-form" style="display: flex; flex-direction: column; gap: 15px; width: 100%;">
+                        <input type="text" id="j-name" placeholder="Full Name" required style="padding: 15px; width: 100%; border:none; border-radius:5px;">
+                        <input type="email" id="j-email" placeholder="Email Address" required style="padding: 15px; width: 100%; border:none; border-radius:5px;">
+                        <select id="j-exp" style="padding: 15px; width: 100%; border:none; border-radius:5px;">
+                            <option value="">Select Experience Level</option>
+                            <option value="beginner">Beginner</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="advanced">Advanced</option>
+                        </select>
+                        <textarea id="j-msg" placeholder="Why do you want to join?" rows="4" style="padding: 15px; width: 100%; border:none; border-radius:5px;"></textarea>
+                        <button type="submit" class="btn-primary" style="margin-top: 10px; width: 150px;">Submit</button>
+                    </form>
+                </div></div>
             </section>
         </div>
     </main>
 
-    <footer id="main-footer"></footer>
+    <footer class="main-footer">
+        <div class="footer-upper">
+            <div class="footer-brand">
+                <div class="footer-title">
+                <div class="footer-logo">UC</div>
+                    <div class="footer-title-txt">
+                        <h2>Exploring responsibly, preserving for tomorrow.</h2>
+                    </div>
+                </div>
+                <p class="footer-description">Discover the hidden and untold destinations of Sri Lanka through immersive storytelling,
+                     responsible travel, and authentic local experiences.
+                </p>
+            </div>
+            <div class="footer-contact-nav">
+                <div class="footer-links">
+                    <div class="footer-nav-support">
+                        <div class="footer-nav">
+                            <a href="#">Stories</a>
+                            <a href="#">Hidden Experiences</a>
+                            <a href="#">Communities</a>
+                            <a href="#">Plan Your Trip</a>
+                        </div>
+                        <div class="footer-support">
+                            <a href="#">FAQ</a>
+                            <a href="#">Accessibility Policy</a>
+                            <a href="#">Privacy Policy</a>
+                        </div>
+                    </div>
+                    <div class="footer-social">
+                        <div class="fb"></div>
+                        <div class="insta"></div>
+                        <div class="yt"></div>
+                        <div class="x"></div>
+                        <div class="tiktok"></div>
+                    </div>
+
+                </div>
+                <div class="footer-contact" id="footer-contact">
+                    <h3>Contact Us</h3>
+                    <div class="footer-email-row">
+                        <label>Email :</label><input type="email" id="email" name="email">
+                    </div>
+                    <div class="footer-message-row">
+                        <label>Message :</label>
+                        <textarea id="message" name="message" rows="4">
+                        </textarea>
+                    </div>
+                    <br>
+                       <button class="send" id="footer-send-btn">Send</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="footer-bottom">
+            <p>&copy 2026 Uncharted Ceylon. All rights reserved.</p>
+        </div>
+
+    </footer>
     <script src="js/data.js"></script>
     <script src="js/main.js"></script>
 </body>
