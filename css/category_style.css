@@ -1,0 +1,389 @@
+/* --- Variables & Reset --- */
+:root {
+    --deep-green: #1a2e1a;
+    --warm-brown: #4a3728;
+    --earth-beige: #e8f0e8;
+    --accent-green: #39ff14; /* For buttons and highlights */
+    --text-main: #2c2c2c;
+    --serif-font: 'Playfair Display', serif;
+    --sans-font: 'Roboto','Inter', sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { 
+    font-family: var(--sans-font); 
+    color: var(--text-main); 
+    line-height: 1.6; 
+    background-color: #fff;
+}
+h1{
+    font-size: 64px;
+}
+h1, h2, h3, .serif { font-family: var(--serif-font); font-weight: 700; }
+
+/* --- Layout --- */
+.section-container { padding: 0 10%; }
+.bg-light { background-color: var(--earth-beige); }
+.container-narrow { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+
+/* --- Navigation --- */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background: #000;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+.logo { font-weight: 900; font-size: 1.5rem; }
+.nav-links a { 
+    color: #fff; 
+    text-decoration: none; 
+    margin-left: 20px; 
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+.nav-links { color: var(--accent-green); font-weight: bold; }
+.nav-links a:hover{
+    background-color: var(--accent-green);
+    color: #000;
+    padding: 10px;
+}
+.nav-links #nav-hidden-experiences{
+    background-color: var(--accent-green);
+    color: #000;
+    padding: 10px;
+}
+/* --- Hero --- */
+.hero {
+    height: 850px;
+    background-color: #e5d5d5;
+    /*background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('../images/hero-img.jpg');*/
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+}
+/* cards section */
+.card-slider{
+    display: flex;
+    justify-content: center;
+}
+.wrapper {
+            display: flex;
+            align-items: center;
+            width: 90%;
+            background: var(--earth-beige);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+.scroll-container {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto; /* Allows manual touch/mouse scroll */
+            scroll-behavior: smooth; /* Makes the button jump look like a slide */
+            padding: 10px;
+            background-color: var(--earth-beige);
+            width: 1200px;
+        }
+
+        /* Hide the scrollbar at the bottom for a cleaner look */
+        .scroll-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* The Card itself */
+        .card-img-placeholder {
+    height: 200px; /* Use a fixed pixel height instead of % for stability */
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 4px;
+    flex-shrink: 0; /* Prevents the image from shrinking */
+}
+        .card {
+    background-color: #fff;
+    width: 350px;
+    height: 500px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    flex-shrink: 0; 
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* This kills the scrollbar */
+}
+.card h3 {
+    margin-top: 15px;
+    font-size: 20px;
+}
+        .explore-btn{
+            background-color: black;
+            color:white;
+            padding: 10px 30px;
+            margin: 150px 105px;
+            
+        }
+        .explore-btn:hover{
+            background-color: var(--accent-green);
+            color: #000;
+            transition-duration: .4s;
+        }
+        .card p {
+    margin-top: 10px;
+     /* Limits text height without breaking layout */
+    overflow: hidden; /* Ensures long text doesn't push the button out */
+    font-size: 16px;
+    
+
+    
+}
+        .item-desc{
+            height: 100px;
+        }
+
+        .btn {
+           background: #000000;
+    color: white;
+    border: none;
+    font-size: 22px;
+    padding: 12px 16px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition-duration:0.5s ;
+        }
+
+        .btn:hover {
+            background-color: var(--accent-green);
+    color: black;
+    transition-duration:0.5s ;
+        }
+        
+        .section-title{
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
+        h2{
+            font-size: 40px;
+
+        }
+        .intro-text{
+            font-size: 20px;
+            margin: 50px;
+        }
+
+.main-footer{
+    width: 100%;
+    background-color: #f4ece4;
+}
+.footer-upper {
+    height: 635px;
+    width: 100%;
+    padding-left: 150px;
+    padding-right: 150px;
+    /* We add the gradient BEFORE the url */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/hero-img.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    /* Removed opacity: 50% so the text stays sharp */
+}
+.footer-brand{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.footer-title{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 50px;
+}
+
+.footer-logo {
+    width: 60px;
+    height: 60px;
+    background-color: var(--deep-green); /* Your #1a2e1a */
+    border: 2px solid var(--accent-green); /* Your #39ff14 */
+    color: var(--accent-green);
+    
+    /* Typography */
+    font-family: 'Playfair Display', serif; /* Or your main heading font */
+    font-weight: 800;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    
+    /* Centering the "UC" */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* Shape & Effects */
+    border-radius: 12px; /* Slightly rounded for a modern look */
+    box-shadow: 0 4px 15px rgba(57, 255, 20, 0.2); /* Glow effect */
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover Effect for Design Ideation */
+.footer-logo:hover {
+    background-color: var(--accent-green);
+    color: var(--deep-green);
+    transform: rotate(-5deg) scale(1.1);
+    box-shadow: 0 6px 20px rgba(57, 255, 20, 0.4);
+}
+.footer-description{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: 18px;
+}
+.footer-contact-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 250px;
+}
+.footer-nav-support{
+    display: flex;
+    justify-content: space-between;
+    width: 367px;
+}
+.footer-nav-support a{
+    text-decoration: none;
+    color: white;
+}
+.footer-nav a{
+    display: block;
+}
+.footer-support a{
+    display: block;
+}
+.footer-contact h3{
+    font-size: 32px;
+    text-align: center;
+}
+.footer-message-row{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    gap: 35px;
+}
+.footer-contact input, .footer-contact textarea{
+    width: 400px;
+    border-radius: 5px;
+    border: none;
+}
+.footer-email-row{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+}
+.footer-email-row input[type="email"]{
+    height: 30px;
+    margin-top: 10px;
+    margin-bottom :10px ;
+}
+
+.footer-bottom{
+    background-color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    height: 60px;
+}
+.footer-social{
+    margin-top: 50px;
+    padding: 0 50px;
+    gap: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-social .fb{
+    background-image: url("../images/icons/Facebook.png");
+    background-size: contain; /* Ensures the whole logo fits inside the box */
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 30px;
+    height: 30px;
+     /* Ensures the div respects width/height */
+}
+.footer-social .insta{
+    background-image: url("../images/icons/Instagram.png");
+    background-size: contain; /* Ensures the whole logo fits inside the box */
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 30px;
+    height: 30px;
+     /* Ensures the div respects width/height */
+}.footer-social .yt{
+    background-image: url("../images/icons/YouTube.png");
+    background-size: contain; /* Ensures the whole logo fits inside the box */
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 30px;
+    height: 30px;
+     /* Ensures the div respects width/height */
+}.footer-social .x{
+    background-image: url("../images/icons/X.png");
+    background-size: contain; /* Ensures the whole logo fits inside the box */
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 30px;
+    height: 30px;
+    
+}.footer-social .tiktok{
+    background-image: url("../images/icons/TikTok.png");
+    background-size: contain; /* Ensures the whole logo fits inside the box */
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 30px;
+    height: 30px;
+    
+}
+main{
+    margin-bottom: 100px;
+}
+
+.fb:hover, .insta:hover, .yt:hover, .x:hover, .tiktok:hover{
+    transition-duration:0.2s ;
+    cursor: pointer;
+    border-style: dashed;
+    border-color: var(--accent-green);
+    transform:scale(1.1);
+}
+.fb,.insta,.x,.yt,.tiktok{
+    transition-duration:0.2s ;
+}
+.footer-upper a{
+    transition-duration: 0.5s;
+    
+}
+.footer-contact .send{
+    padding: 8px 25px;
+    font-size: 16px;
+    font-family: var(--sans-font);
+    background-color: var(--accent-green);
+    border-radius: 5px;
+    border: none;
+}
+.footer-contact .send{
+    cursor: pointer;
+
+}
+a{text-decoration: none;
+color: #ffffff;}
+/* Responsive */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2rem; }
+    .story-card { flex-direction: column !important; }
+    .story-card img { width: 100%; }
+    .footer-grid { grid-template-columns: 1fr; }
+}
