@@ -9,13 +9,13 @@
 <body>
     <header id="main-nav">
         <nav>
-                <div class="logo">UC</div>
+                <a href="index.html"> <div class="logo">UC</div></a>
                 <div class="nav-links">
                     <a href="index.html" id="nav-home">Home</a>
                     <a href="index.html?#stories">Stories</a>
-                    <a href="index.html?category.html?type=waterfalls" id="nav-hidden-experiences">Hidden Experiences</a>
+                    <a href="index.html?#hidden-experiences" id="nav-hidden-experiences">Hidden Experiences</a>
                     <a href="index.html?#travel-cost">Travel Cost</a>
-                    <a href="crew.html?group=waterfall-seekers">Communities</a>
+                    <a href="index.html?#crew">Communities</a>
                     <a href="index.html?#sustainability">Sustainability</a>
                     <a href="#footer-contact">Contact</a>
                 </div>
@@ -38,19 +38,198 @@
             </section>
 
             <section class="split-section">
-                <div class="text-block">
-                    <h2 id="det-about-title" class="line-header">About</h2>
+                
+                    <h2 class="section-title">About</h2>
+                    <div class="about-content">
+                        <div class="image-block">
+                    <img id="det-about-img"  alt="About location">
+                </div>
+                        
+                        <div class="text-block">
                     <p id="det-description"></p>
                 </div>
-                <div class="image-block">
-                    <img id="det-about-img" src="images/placeholder.jpg" alt="About location">
+                
                 </div>
             </section>
+            <section class="split-section">
+                
+                    <h2  class="section-title">Getting There</h2>
+                        
+                    <div class="about-content">
+                        <div class="text-block">
+                            <p id="det-getting"></p>
+                        </div>
+                        
+                        <div class="iframe-block" id="iframe-block" >        </div>
+                    </div>
+            </section>
+            <section class="split-section">
+                
+                    <h2 class="section-title">Essential Packing Guide</h2>
+                    <div class="about-content">
+                        <div class="image-block">
+                    <img id="det-about-img" src="images/items-to-bring.jpg" alt="About Packing"> <!-- image should be static link-->
+                </div>
+                        <div class="text-block">
+                    <ul >
+                        <li>Comfortable walking shoes</li>
+                        <li>Drinking water</li>
+                        <li>Light rain jacket</li>
+                        <li>Camera or smartphone</li>
+                        <li>Eco-friendly trash bag</li>
+                    </ul>
+                    <p class="ul-description">Visitors are encouraged to avoid littering and protect the natural surroundings.</p>
+                </div>
+                
+                </div>
+            </section>
+            <section class="split-section">
+                
+                    <h2  class="section-title">Safety Notes</h2>
+                        
+                    <div class="about-content-safety">
+                        <div class="text-block">
+                            <ul id="det-safety">
 
-        </div>
+                            </ul>
+                        </div>
+                        <img id="det-about-img" src="images/safety-img.jpg" alt="About location"> <!-- image should be static link-->
+                        
+                    </div>
+            </section>
+            <section class="split-section">
+            <h2 class="section-title">Join Fellow Explorers</h2>
+            <div class="crew-wrapper">
+            <button class="scroll-btn left" onclick="scrollCrew(-1)">&#10094;</button>
+
+            <div class="crew-scroll" id="crewScroll">
+
+            <div class="crew-circle" style="background-image: url('./images/hero-img.jpg');">
+                <div class="overlay">
+                    <h3>Waterfall Explorers</h3>
+                    <p>Chase hidden forest cascades with adventure lovers.</p>
+                    <button class="join-btn">Join</button>
+                </div>
+            </div>
+
+            <div class="crew-circle" style="background-image: url('./images/placeholder.jpg');">
+                <div class="overlay">
+                    <h3>Cultural Trail</h3>
+                    <p>Experience ancient cities and village traditions.</p>
+                    <button class="join-btn">Join</button>
+                </div>
+            </div>
+
+            <div class="crew-circle" style="background-image: url('./images/placeholder.jpg');">
+                <div class="overlay">
+                    <h3>Hidden Beaches</h3>
+                    <p>Discover peaceful shores beyond the crowds.</p>
+                    <button class="join-btn">Join</button>
+                </div>
+            </div>
+
+            <div class="crew-circle" style="background-image: url('./images/hero-img.jpg');">
+                <div class="overlay">
+                    <h3>Mountain Hiking</h3>
+                    <p>Climb scenic peaks and watch golden sunrises.</p>
+                    <button class="join-btn">Join</button>
+                </div>
+            </div>
+
+            <div class="crew-circle" style="background-image: url('./images/hero-img.jpg');">
+                <div class="overlay">
+                    <h3>Camping Crew</h3>
+                    <p>Sleep under the stars in wild landscapes.</p>
+                    <button class="join-btn">Join</button>
+                </div>
+            </div>
+
+            </div>
+
+            <button class="scroll-btn right" onclick="scrollCrew(1)">&#10095;</button>
+            </div>
+            
+        </section>
+        <section id="hidden-experiences" class="split-section">
+            
+            <div class="title-row">
+                <h2 id="cat-subtitle" class="section-title">Explore More</h2>
+                <!-- <div class="title-line"></div> -->
+            </div>
+            
+            <p id="cat-intro-text" class="intro-text"></p>
+            <div class="card-slider">
+            <div class="wrapper">
+                <button class="btn" onclick="moveLeft()">&#10094;</button>
+
+                <div class="scroll-container" id="category-items-container"></div>
+
+                <button class="btn" onclick="moveRight()">&#10095;</button>
+            </div>
+            </div>
+            
+        </section>
+
     </main>
 
-    <footer id="main-footer"></footer>
+    <footer class="main-footer">
+        <div class="footer-upper">
+            <div class="footer-brand">
+                <div class="footer-title">
+                    <div class="footer-logo">UC</div>
+                    <div class="footer-title-txt">
+                        <h2>Exploring responsibly, preserving for tomorrow.</h2>
+                    </div>
+                </div>
+                <p class="footer-description">Discover the hidden and untold destinations of Sri Lanka through immersive storytelling,
+                     responsible travel, and authentic local experiences.
+                </p>
+            </div>
+            <div class="footer-contact-nav">
+                <div class="footer-links">
+                    <div class="footer-nav-support">
+                        <div class="footer-nav">
+                            <a href="#">Stories</a>
+                            <a href="#">Hidden Experiences</a>
+                            <a href="#">Communities</a>
+                            <a href="#">Plan Your Trip</a>
+                        </div>
+                        <div class="footer-support">
+                            <a href="#">FAQ</a>
+                            <a href="#">Accessibility Policy</a>
+                            <a href="#">Privacy Policy</a>
+                        </div>
+                    </div>
+                    <div class="footer-social">
+                        <div class="fb"></div>
+                        <div class="insta"></div>
+                        <div class="yt"></div>
+                        <div class="x"></div>
+                        <div class="tiktok"></div>
+                    </div>
+
+                </div>
+                <div class="footer-contact" id="footer-contact">
+                    <h3>Contact Us</h3>
+                    <div class="footer-email-row">
+                        <label>Email :</label><input type="email" id="email" name="email">
+                    </div>
+                    <div class="footer-message-row">
+                        <label>Message :</label>
+                        <textarea id="message" name="message" rows="4">
+                        </textarea>
+                    </div>
+                    <br>
+                        <button class="send" id="footer-send-btn">Send</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="footer-bottom">
+            <p>&copy 2026 Uncharted Ceylon. All rights reserved.</p>
+        </div>
+
+    </footer>
 
     <script src="js/data.js"></script>
     <script src="js/main.js"></script>
