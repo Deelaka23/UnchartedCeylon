@@ -2,7 +2,7 @@
 :root {
     --deep-green: #1a2e1a;
     --warm-brown: #4a3728;
-    --earth-beige: #f4ece4;
+    --earth-beige: #e8f0e8;
     --accent-green: #39ff14; /* For buttons and highlights */
     --text-main: #000000;
     --serif-font: 'Playfair Display', serif;
@@ -85,11 +85,14 @@ nav {
     border: none;
     cursor: pointer;
     margin-top: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     transition: 0.5s;
 }
 .btn-primary:hover{
-    transition: 0.5s;
+    
     padding:22px 25px ;
+    transform: translateY(-5px); /* Moves it up slightly */
+    box-shadow: 0 20px 40px rgb(183, 225, 180);
 }
 
 /*--- s-bar ---*/
@@ -97,24 +100,29 @@ nav {
     width: 700px;
     height: 50px;
     border-radius: 25px;
+    padding-left: 50px;
 }
 .search-bar input[type="text"]::placeholder{
-    padding-left: 20px;
+    padding-left: 0px;
     font-size: 20px;
 }
 .search-bar{
     margin-bottom: 30px;
 }
 .btn-search{
+    display: inline-block;
     box-sizing: none;
     height: 45px;
     width: 45px;
+    background-image: url("../images/icons/search.png");
+    background-size: cover;
     position: relative;
-    top: 20px;
-    right:55px;
+    bottom: 8px;
+    right:50px;
     border: none;
     border-radius: 25px;
     text-align: center;
+    cursor: pointer;
 }
 .btn-search img{
     width: 45px;
@@ -128,18 +136,35 @@ h2{
     width: 1200px;
     height: 427px;
     margin-bottom: 50px;
+    transition-duration: 0.4s;
+}
+#card1:hover{
+    transition-duration: 0.4s;
+    scale: 1.03;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+#card2:hover{
+    transition-duration: 0.4s;
+    scale: 1.03;
+}
+#card3:hover{
+    transition-duration: 0.4s;
+    scale: 1.03;
 }
 #card2{
+
     display: flex;
     width: 1200px;
     height: 427px;
     margin-top: 50px;
+    transition-duration: 0.4s;
 }
 #card3{
     display: flex;
     width: 1200px;
     height: 427px;
     margin-top: 50px;
+    transition-duration: 0.4s;
 }
 #s1-1,#s1 ,#s2,#s2-2 ,#s3, #s3-3{
     display: inline;
@@ -154,12 +179,26 @@ h2{
     font-weight: bold;
     font-family: 'Playfair Display', serif;
 } 
-#s1 ,#s2 ,#s3 {
+
+#s1{
     height: 427px;
     width: 600px;
-    background-image: url("../images/placeholder.jpg");
+    background-image: url("../images/story/knuckles.jpg");
     background-size:cover ;
-} 
+}
+#s2{
+    height: 427px;
+    width: 600px;
+    background-image: url("../images/story/beach.jpg");
+    background-size:cover ;
+}
+#s3{
+    height: 427px;
+    width: 600px;
+    background-image: url("../images/story/waterfall.jpg");
+    background-size:cover ;
+}
+
 .section-title{
     margin-top: 100px;
     margin-bottom: 100px;
@@ -174,7 +213,7 @@ h2{
             display: flex;
             align-items: center;
             width: 90%;
-            background: rgb(196, 159, 159);
+            background: var(--earth-beige);
             padding: 20px;
             border-radius: 10px;
         }
@@ -203,46 +242,49 @@ h2{
             border: 2px solid #ddd;
             border-radius: 8px;
             padding: 15px;
-            flex-shrink: 0; /* VERY IMPORTANT: stops cards from squishing */
+            flex-shrink: 0;
+            
+            /* FIX 1: Add 's' for seconds. 0.1s is very fast, 0.3s is usually smoother */
+            transition: transform 0.3s ease; 
+            /* FIX 2: Use transform instead of scale for better browser support */
+            transform: scale(1);
+        }
+
+        .card:hover {
+            /* FIX 3: Apply the scale change here */
+            transform: scale(1.03);
+            /* Optional: Add a subtle shadow to enhance the 'lift' effect */
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            
+        }
+
+        #waterfall-img{
+            height: 50%;
+            width: 100%;
+            background-image: url("../images/waterfalls/bakersfalls.jpg");
+            background-size: cover;
         }
         
-        #waterfall-img{
-            height: 50%;
-            width: 100%;
-            background-image: url("../images/placeholder.jpg");
-            background-size: cover;
-        }
-        #waterfall-img{
-            height: 50%;
-            width: 100%;
-            background-image: url("../images/placeholder.jpg");
-            background-size: cover;
-        }
         #mountain-img{
             height: 50%;
             width: 100%;
-            background-image: url("../images/placeholder.jpg");
+            background-image: url("../images/mountains/piduruthalagala.jpg");
             background-size: cover;
         }
         #beach-img{
             height: 50%;
             width: 100%;
-            background-image: url("../images/placeholder.jpg");
+            background-image: url("../images/beaches/tangalle.jpg");
             background-size: cover;
         }
         #camping-img{
             height: 50%;
             width: 100%;
-            background-image: url("../images/placeholder.jpg");
+            background-image: url("../images/camping/ella.jpg");
             background-size: cover;
         }
         
-        #village-img{
-            height: 50%;
-            width: 100%;
-            background-image: url("../images/placeholder.jpg");
-            background-size: cover;
-        }
+        
         .explore-btn{
             background-color: black;
             color:white;
@@ -256,22 +298,26 @@ h2{
             transition-duration: .4s;
         }
         .card p{
-            height: 120px;
+            height: 100px;
         }
-
+        .card h3{
+            margin: 10px 0;
+        }
         .btn {
-            background-color: wheat;
-            color: rgb(0, 0, 0);
-            border: none;
-            padding: 15px;
-            cursor: pointer;
-            border-radius: 50%;
-            font-size: 20px;
-            margin: 20px;
+           background: #000000;
+    color: white;
+    border: none;
+    font-size: 22px;
+    padding: 12px 16px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition-duration:0.5s ;
         }
 
         .btn:hover {
-            background-color:var(--accent-green);
+            background-color: var(--accent-green);
+    color: black;
+    transition-duration:0.5s ;
         }
 /* budget cal */
 .cost-form h3{
@@ -286,16 +332,21 @@ h2{
     padding: 25px;
     margin: 50px;
     background-color:var(--earth-beige);
-    width: 800px;
+    width: 1000px;
     font-size: 18px;
     border-radius: 10px;
     ;
 }
 select,input{
-    margin-bottom: 10px;
-    margin-top: 10px;
-    width: 500px;
-    height: 30px;
+    background-color: white;
+    width: 600px;
+    border: none;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    
+    font-family: var(--sans-font);
+    font-size: 16px;
 }
 .cal-btn { 
     background: #000; 
@@ -331,6 +382,7 @@ select,input{
     display: flex;
     align-items: center;
     background-color: var(--earth-beige);
+    border-radius: 10px;
 }
 
 /* Scroll Container */
@@ -381,7 +433,7 @@ select,input{
 /* Title */
 .overlay h3 {
     font-size: 1.3rem;
-    margin-bottom: 10px;
+    margin-bottom: 50px;
 }
 
 /* Description */
@@ -417,8 +469,13 @@ select,input{
     padding: 12px 16px;
     cursor: pointer;
     border-radius: 50%;
+    transition-duration:0.5s ;
 }
-
+.scroll-btn:hover{
+    background-color: var(--accent-green);
+    color: black;
+    transition-duration:0.5s ;
+}
 .scroll-btn.left {
     margin-right: 15px;
 }
@@ -441,10 +498,16 @@ select,input{
     border-radius: 10px;
 }
 .travel-responsibly-img{
-    background-image: url("../images/hero-img.jpg");
+    background-image: url("../images/beaches/pasikuda.jpg");
     background-size: cover;
     width: 600px;
     height: auto;
+    transition-duration: 0.6s;
+}
+.travel-responsibly-img:hover{
+    scale: 1.04;
+    box-shadow: 10px 15px 40px rgba(74, 55, 40, 0.2);
+
 }
 .travel-responsibly-txt ul li{
     margin-left: 40px;
@@ -487,13 +550,36 @@ main{
 }
 
 .footer-logo {
-    background-image: url("../images/placeholder.jpg");
-    background-size: contain; /* Ensures the whole logo fits inside the box */
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 100px;
-    height: 100px;
-    display: block; /* Ensures the div respects width/height */
+    width: 60px;
+    height: 60px;
+    background-color: var(--deep-green); /* Your #1a2e1a */
+    border: 2px solid var(--accent-green); /* Your #39ff14 */
+    color: var(--accent-green);
+    
+    /* Typography */
+    font-family: 'Playfair Display', serif; /* Or your main heading font */
+    font-weight: 800;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    
+    /* Centering the "UC" */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* Shape & Effects */
+    border-radius: 12px; /* Slightly rounded for a modern look */
+    box-shadow: 0 4px 15px rgba(57, 255, 20, 0.2); /* Glow effect */
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover Effect for Design Ideation */
+.footer-logo:hover {
+    background-color: var(--accent-green);
+    color: var(--deep-green);
+    transform: rotate(-5deg) scale(1.1);
+    box-shadow: 0 6px 20px rgba(57, 255, 20, 0.4);
 }
 .footer-description{
     padding-top: 50px;
@@ -518,6 +604,12 @@ main{
 .footer-nav a{
     display: block;
 }
+
+.footer-upper a:hover{
+    transition-duration: .3s;
+    text-decoration: underline;
+    text-decoration-color:var(--accent-green) ;
+}
 .footer-support a{
     display: block;
 }
@@ -541,15 +633,7 @@ main{
     align-items:center;
     justify-content: space-between;
 }
-.footer-contact .send{
-    padding: 8px 25px;
-    font-size: 18px;
-    font-family: var(--sans-font);
-    
-    background-color: var(--accent-green);
-    border-radius: 5px;
-    border: none;
-}
+
 .footer-bottom{
     background-color: #000000;
     display: flex;
@@ -565,6 +649,7 @@ main{
     display: flex;
     justify-content: space-between;
 }
+
 .footer-social .fb{
     background-image: url("../images/icons/Facebook.png");
     background-size: contain; /* Ensures the whole logo fits inside the box */
@@ -607,6 +692,34 @@ main{
     height: 30px;
     
 }
+
+.fb:hover, .insta:hover, .yt:hover, .x:hover, .tiktok:hover{
+    transition-duration:0.2s ;
+    cursor: pointer;
+    border-style: dashed;
+    border-color: var(--accent-green);
+    transform:scale(1.1);
+}
+.fb,.insta,.x,.yt,.tiktok{
+    transition-duration:0.2s ;
+}
+.footer-upper a{
+    transition-duration: 0.5s;
+    
+}
+.footer-contact .send{
+    padding: 8px 25px;
+    font-size: 16px;
+    font-family: var(--sans-font);
+    background-color: var(--accent-green);
+    border-radius: 5px;
+    border: none;
+}
+.footer-contact .send{
+    cursor: pointer;
+
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .hero h1 { font-size: 2rem; }
@@ -614,3 +727,5 @@ main{
     .story-card img { width: 100%; }
     .footer-grid { grid-template-columns: 1fr; }
 }
+a{text-decoration: none;
+color: #ffffff;}
