@@ -10,13 +10,13 @@
 <body>
     <header id="main-nav">
         <nav>
-                <div class="logo">UC</div>
+                <a href="index.html"> <div class="logo">UC</div></a>
                 <div class="nav-links">
                     <a href="index.html" id="nav-home">Home</a>
                     <a href="index.html?#stories">Stories</a>
-                    <a href="index.html?category.html?type=waterfalls" id="nav-hidden-experiences">Hidden Experiences</a>
+                    <a href="index.html?#hidden-experiences" id="nav-hidden-experiences">Hidden Experiences</a>
                     <a href="index.html?#travel-cost">Travel Cost</a>
-                    <a href="crew.html?group=waterfall-seekers">Communities</a>
+                    <a href="index.html?#crew">Communities</a>
                     <a href="index.html?#sustainability">Sustainability</a>
                     <a href="#footer-contact">Contact</a>
                 </div>
@@ -39,11 +39,11 @@
             <p id="cat-intro-text" class="intro-text"></p>
             <div class="card-slider">
             <div class="wrapper">
-                <button class="btn" onclick="moveLeft()">&lt;</button>
+                <button class="btn" onclick="moveLeft()">&#10094;</button>
 
                 <div class="scroll-container" id="category-items-container"></div>
 
-                <button class="btn" onclick="moveRight()">&gt;</button>
+                <button class="btn" onclick="moveRight()">&#10095;</button>
             </div>
             </div>
         </section>
@@ -53,7 +53,7 @@
         <div class="footer-upper">
             <div class="footer-brand">
                 <div class="footer-title">
-                    <div class="footer-logo" style="background-image: url('./images/placeholder.jpg');"></div>
+                    <div class="footer-logo">UC</div>
                     <div class="footer-title-txt">
                         <h2>Exploring responsibly, preserving for tomorrow.</h2>
                     </div>
@@ -97,7 +97,7 @@
                         </textarea>
                     </div>
                     <br>
-                        <button class="send" value="Send">Send</button>
+                        <button class="send" id="footer-send-btn">Send</button>
                 </div>
             </div>
 
